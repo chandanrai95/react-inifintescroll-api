@@ -22,7 +22,7 @@ export const Get_Users = ( payload, transaction = null ) => {
         USERS.findAndCountAll(options)
         .then( result => {
             
-            const remain = result.count - (offset+10);
+            const remain = result.count - (offset+20);
             console.log(remain, offset+ "/" + result.count)
             resolve({remain: remain>0?true:false, arr: result.rows})
         })
