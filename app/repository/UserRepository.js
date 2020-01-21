@@ -8,8 +8,8 @@ export const Get_Users = ( payload, transaction = null ) => {
     if(!USERS) USERS = getInstance(schema.USERS);
 
     return new Promise ((resolve, reject) => {
-        let offset = payload.page * 10;
-        let limit = 10;
+        let offset = payload.page * 20;
+        let limit = 20;
 
         let options = {}
         if(transaction)
